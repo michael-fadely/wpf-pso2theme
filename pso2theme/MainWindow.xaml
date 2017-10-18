@@ -137,6 +137,24 @@
         </Trigger>
       </Style.Triggers>
     </Style>
+
+    <Style TargetType="TextBlock">
+      <Setter Property="Foreground" Value="White" />
+      <Setter Property="FontSize" Value="16" />
+      <Setter Property="FontWeight" Value="SemiBold" />
+      <Setter Property="Background" Value="#FF0E1D24" />
+    </Style>
+
+    <Style TargetType="Separator">
+      <Setter Property="Background">
+        <Setter.Value>
+          <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Color="#FFC8DEE9"/>
+            <GradientStop Color="#00C8DEE9" Offset="1"/>
+          </LinearGradientBrush>
+        </Setter.Value>
+      </Setter>
+    </Style>
   </Window.Resources>
 
   <Grid Margin="6,8">
@@ -145,25 +163,18 @@
       <RowDefinition Height="Auto"/>
       <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
+
+    <TextBlock Grid.Row="0" Margin="2" TextWrapping="Wrap" Text="ゲームをしゅうりょうしてよろしいですか？" />
     
-    <TextBlock Grid.Row="0" Margin="2" TextWrapping="Wrap" Text="ゲームをしゅうりょうしてよろしいですか？" Foreground="White" Background="#FF0E1D24" FontSize="16" FontWeight="SemiBold" />
-
-    <Separator Grid.Row="1" >
-      <Separator.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
-          <GradientStop Color="#FFC8DEE9"/>
-          <GradientStop Color="#00C8DEE9" Offset="1"/>
-        </LinearGradientBrush>
-      </Separator.Background>
-    </Separator>
-
+    <Separator Grid.Row="1" />
+    
     <Grid Height="34" VerticalAlignment="Bottom" Grid.Row="2">
       <Grid.ColumnDefinitions>
         <ColumnDefinition/>
         <ColumnDefinition/>
       </Grid.ColumnDefinitions>
-      <Button Grid.Column="0" Content="はい" />
-      <Button Grid.Column="1" Content="いいえ" />
+      <Button Grid.Column="0" Content="はい" Width="Auto" />
+      <Button Grid.Column="1" Content="いいえ" Width="Auto" />
     </Grid>
   </Grid>
 </Window>
