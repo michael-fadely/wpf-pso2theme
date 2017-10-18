@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="198" Width="416" Background="#FF151E2E">
 
+  <!--TODO: move to app.xaml-->
   <Window.Resources>
     <LinearGradientBrush x:Key="NormalBackground" StartPoint="0,0" EndPoint="0,1">
       <GradientStop Color="#4992D7" Offset="0.0" />
@@ -54,11 +55,12 @@
       <Setter Property="BorderBrush" Value="{StaticResource NormalBorder}"/>
       <Setter Property="Background" Value="{StaticResource NormalBackground}"/>
       <Setter Property="Foreground" Value="White"/>
-      <Setter Property="BorderThickness" Value="128"/>
+      <Setter Property="BorderThickness" Value="2"/>
       <Setter Property="FontWeight" Value="SemiBold"/>
-      <Setter Property="Margin" Value="2"></Setter>
+      <Setter Property="FontSize" Value="16"/>
+      <Setter Property="Margin" Value="2"/>
 
-      <Setter Property="Template">
+      <!--<Setter Property="Template">
         <Setter.Value>
           <ControlTemplate TargetType="{x:Type Button}">
             <Border Background="{TemplateBinding Background}">
@@ -66,36 +68,65 @@
             </Border>
           </ControlTemplate>
         </Setter.Value>
-      </Setter>
+      </Setter>-->
 
       <Style.Triggers>
         <Trigger Property="IsMouseOver" Value="True">
-          <Setter Property="BorderBrush" Value="{StaticResource HoverBorder}"/>
           <Setter Property="Background" Value="{StaticResource HoverBackground}"/>
+
+          <Setter Property="Template">
+            <Setter.Value>
+              <ControlTemplate TargetType="{x:Type Button}">
+                <Border Background="{TemplateBinding Background}" BorderBrush="{StaticResource HoverBorder}" BorderThickness="2">
+                  <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+              </ControlTemplate>
+            </Setter.Value>
+          </Setter>
+          
         </Trigger>
 
-        <Trigger Property="IsFocused" Value="True">
-          <Setter Property="BorderBrush" Value="{StaticResource HoverBorder}"/>
+        <Trigger Property="IsKeyboardFocused" Value="True">
           <Setter Property="Background" Value="{StaticResource HoverBackground}"/>
+
+          <Setter Property="Template">
+            <Setter.Value>
+              <ControlTemplate TargetType="{x:Type Button}">
+                <Border Background="{TemplateBinding Background}" BorderBrush="{StaticResource HoverBorder}" BorderThickness="2">
+                  <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+              </ControlTemplate>
+            </Setter.Value>
+          </Setter>
+          
         </Trigger>
 
         <Trigger Property="IsPressed" Value="True">
-          <Setter Property="BorderBrush" Value="{StaticResource PressedBorder}"/>
           <Setter Property="Background" Value="{StaticResource PressedBackground}"/>
+
+          <Setter Property="Template">
+            <Setter.Value>
+              <ControlTemplate TargetType="{x:Type Button}">
+                <Border Background="{TemplateBinding Background}" BorderBrush="{StaticResource PressedBorder}" BorderThickness="2">
+                  <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+              </ControlTemplate>
+            </Setter.Value>
+          </Setter>
+          
         </Trigger>
       </Style.Triggers>
     </Style>
   </Window.Resources>
 
-
-  <Grid Margin="8">
+  <Grid Margin="6,8">
     <Grid HorizontalAlignment="Center" Height="34" VerticalAlignment="Bottom" Width="384">
       <Grid.ColumnDefinitions>
         <ColumnDefinition/>
         <ColumnDefinition/>
       </Grid.ColumnDefinitions>
-      <Button Grid.Column="0" Content="はい" FontSize="16" />
-      <Button Grid.Column="1" Content="いいえ" FontSize="16" />
+      <Button Grid.Column="0" Content="はい" />
+      <Button Grid.Column="1" Content="いいえ" />
     </Grid>
   </Grid>
 </Window>
