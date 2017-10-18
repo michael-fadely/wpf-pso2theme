@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pso2theme"
         mc:Ignorable="d"
-        Title="MainWindow" Height="198" Width="416" Background="#FF151E2E">
+        Title="MainWindow" Height="198" Width="403" Background="#FF1C3846">
 
   <!--TODO: move to app.xaml-->
   <Window.Resources>
@@ -103,7 +103,7 @@
           </Setter>
 
         </Trigger>
-        
+
         <Trigger Property="IsMouseOver" Value="True">
           <Setter Property="Background" Value="{StaticResource MouseOverBackground}"/>
 
@@ -117,7 +117,7 @@
               </ControlTemplate>
             </Setter.Value>
           </Setter>
-          
+
         </Trigger>
 
         <Trigger Property="IsPressed" Value="True">
@@ -133,14 +133,31 @@
               </ControlTemplate>
             </Setter.Value>
           </Setter>
-          
+
         </Trigger>
       </Style.Triggers>
     </Style>
   </Window.Resources>
 
   <Grid Margin="6,8">
-    <Grid HorizontalAlignment="Center" Height="34" VerticalAlignment="Bottom" Width="384">
+    <Grid.RowDefinitions>
+      <RowDefinition />
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    
+    <TextBlock Grid.Row="0" Margin="2" TextWrapping="Wrap" Text="ゲームをしゅうりょうしてよろしいですか？" Foreground="White" Background="#FF0E1D24" FontSize="16" FontWeight="SemiBold" />
+
+    <Separator Grid.Row="1" >
+      <Separator.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+          <GradientStop Color="#FFC8DEE9"/>
+          <GradientStop Color="#00C8DEE9" Offset="1"/>
+        </LinearGradientBrush>
+      </Separator.Background>
+    </Separator>
+
+    <Grid Height="34" VerticalAlignment="Bottom" Grid.Row="2">
       <Grid.ColumnDefinitions>
         <ColumnDefinition/>
         <ColumnDefinition/>
