@@ -6,7 +6,62 @@
         xmlns:local="clr-namespace:pso2theme"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+  <Grid>
+    <Rectangle Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="81" Width="171" StrokeThickness="2">
+      <Rectangle.Stroke>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+          <GradientStop Color="#FF6DAEE5"/>
+          <GradientStop Color="#FF3E7AA6" Offset="1"/>
+          <GradientStop Color="#FF3779AA" Offset="0.5"/>
+          <GradientStop Color="#FF3171A0" Offset="0.5"/>
+        </LinearGradientBrush>
+      </Rectangle.Stroke>
+      <Rectangle.Fill>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+          <GradientStop Color="#4992D7" Offset="0.0" />
+          <GradientStop Color="#3473A5" Offset="0.5" />
+          <GradientStop Color="#266693" Offset="0.5" />
+          <GradientStop Color="#3578AD" Offset="1.0" />
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle Margin="186,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="81" Width="171" StrokeThickness="2">
+      <Rectangle.Stroke>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+          <GradientStop Color="#FFFFF43B"/>
+          <GradientStop Color="#FFF0B41A" Offset="1"/>
+          <GradientStop Color="#FFE49F00" Offset="0.5"/>
+          <GradientStop Color="#FFE29F00" Offset="0.5"/>
+        </LinearGradientBrush>
+      </Rectangle.Stroke>
+      <Rectangle.Fill>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+          <GradientStop Color="#FFF6DD00" Offset="0.0" />
+          <GradientStop Color="#FFF0AB03" Offset="0.5" />
+          <GradientStop Color="#FFD99800" Offset="0.5" />
+          <GradientStop Color="#FFD99800" Offset="1.0" />
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Rectangle Margin="10,96,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="81" Width="171" StrokeThickness="2">
+      <Rectangle.Stroke>
+        <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+          <GradientStop Color="#FF6CDCFF"/>
+          <GradientStop Color="#FF41ABF4" Offset="1"/>
+          <GradientStop Color="#FF36A9FB" Offset="0.5"/>
+          <GradientStop Color="#FF30A0F3" Offset="0.5"/>
+        </LinearGradientBrush>
+      </Rectangle.Stroke>
+      <Rectangle.Fill>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+          <GradientStop Color="#FF49C4F6" Offset="0.0" />
+          <GradientStop Color="#FF34A4F7" Offset="0.5" />
+          <GradientStop Color="#FF2697E5" Offset="0.5" />
+          <GradientStop Color="#FF34A8FC" Offset="1.0" />
+        </LinearGradientBrush>
+      </Rectangle.Fill>
+    </Rectangle>
+    <Button Content="Test" HorizontalAlignment="Left" Margin="247,163,0,0" VerticalAlignment="Top" Width="75"/>
+
+  </Grid>
 </Window>
