@@ -6,28 +6,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="198" Width="403" Background="#FF1C3846">
 
-  <Window.Resources />
+    <Window.Resources />
 
-  <Grid Margin="6,8">
-    <Grid.RowDefinitions>
-      <RowDefinition />
-      <RowDefinition Height="Auto"/>
-      <RowDefinition Height="Auto"/>
-    </Grid.RowDefinitions>
+    <Grid Margin="6,8">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
-    <TextBox Grid.Row="0" Margin="2" TextWrapping="Wrap" ScrollViewer.CanContentScroll="True" IsReadOnly="True" Padding="8"
-             Text="ゲームを終了してよろしいですか？" BorderBrush="{x:Null}" />
+        <TextBox Grid.Row="0"
+                 Margin="2"
+                 TextWrapping="Wrap"
+                 ScrollViewer.CanContentScroll="True"
+                 IsReadOnly="True"
+                 Padding="8"
+                 Text="ゲームを終了してよろしいですか？" BorderBrush="{x:Null}" />
 
-    <Separator Grid.Row="1" />
+        <Separator Grid.Row="1" />
 
-    <Grid Height="34" VerticalAlignment="Bottom" Grid.Row="2">
-      <Grid.ColumnDefinitions>
-        <ColumnDefinition/>
-        <ColumnDefinition/>
-      </Grid.ColumnDefinitions>
+        <Grid Height="34" VerticalAlignment="Bottom" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
 
-      <Button Grid.Column="0" Content="はい" Width="Auto" />
-      <Button Grid.Column="1" Content="いいえ" Width="Auto" />
+            <Button Grid.Column="0" Content="はい" Width="Auto" />
+            <Button Grid.Column="1" Content="いいえ" Width="Auto" />
+        </Grid>
     </Grid>
-  </Grid>
 </Window>
